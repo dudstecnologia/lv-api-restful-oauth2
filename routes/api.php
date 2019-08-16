@@ -6,7 +6,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('v1')->group(function () {
+Route::middleware('auth:api')->prefix('v1')->group(function () {
     /*
     Route::get('/products', 'ProductsController@index');
     Route::post('/products', 'ProductsController@store');
