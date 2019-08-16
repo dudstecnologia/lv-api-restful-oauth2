@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\Http\Requests\ProductsRequest as Request;
 use App\Product;
 
 class ProductsController extends Controller
@@ -32,7 +33,7 @@ class ProductsController extends Controller
     public function destroy(Request $request, Product $product)
     {
         $product->delete();
-        
+
         return $product;
     }
 }
