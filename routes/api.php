@@ -17,6 +17,11 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
 
     //Route::resource('/products', 'ProductsController');
 
+    Route::get('users/me', function () {
+        //return request()->user();
+        return \Auth::user();
+    });
+
     Route::resources([
         '/products' => 'ProductsController',
         '/users' => 'UsersController'
