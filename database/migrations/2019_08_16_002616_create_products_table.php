@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('body');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }
